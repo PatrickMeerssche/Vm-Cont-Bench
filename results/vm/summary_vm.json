@@ -1,0 +1,88 @@
+{
+  "env": "vm",
+  "runs_per_config": 3,
+  "cpu": {
+    "1000x1000": {
+      "size": 1000,
+      "mean_wall_time": 0.5433283333333333,
+      "stdev_wall_time": 0.0054247006676252105,
+      "min_wall_time": 0.538407,
+      "max_wall_time": 0.549145,
+      "mean_user_time": 0.54309,
+      "mean_sys_time": 0.0
+    },
+    "2000x2000": {
+      "size": 2000,
+      "mean_wall_time": 2.1349566666666666,
+      "stdev_wall_time": 0.005156077417313785,
+      "min_wall_time": 2.131695,
+      "max_wall_time": 2.140901,
+      "mean_user_time": 2.1324253333333334,
+      "mean_sys_time": 0.0021186666666666667
+    },
+    "3000x3000": {
+      "size": 3000,
+      "mean_wall_time": 4.8156023333333335,
+      "stdev_wall_time": 0.013980827061849282,
+      "min_wall_time": 4.807185,
+      "max_wall_time": 4.831741,
+      "mean_user_time": 4.8144306666666665,
+      "mean_sys_time": 0.0
+    },
+    "4000x4000": {
+      "size": 4000,
+      "mean_wall_time": 8.608104,
+      "stdev_wall_time": 0.03398530172000885,
+      "min_wall_time": 8.57494,
+      "max_wall_time": 8.642855,
+      "mean_user_time": 8.607104999999999,
+      "mean_sys_time": 0.0
+    }
+  },
+  "io": {
+    "64MB": {
+      "total_mb": 64,
+      "mean_sort_time": 3.0166496666666665,
+      "stdev_sort_time": 0.07313424281643524,
+      "min_sort_time": 2.934076,
+      "max_sort_time": 3.07326,
+      "mean_total_time": 4.190292333333334,
+      "mean_throughput_mb_s": 84.89666666666666,
+      "mean_user_time": 1.246022,
+      "mean_sys_time": 0.8691373333333333
+    },
+    "128MB": {
+      "total_mb": 128,
+      "mean_sort_time": 5.5687283333333335,
+      "stdev_sort_time": 0.6036874016942324,
+      "min_sort_time": 4.899284,
+      "max_sort_time": 6.071741,
+      "mean_total_time": 7.767542333333333,
+      "mean_throughput_mb_s": 92.70333333333333,
+      "mean_user_time": 3.3476933333333334,
+      "mean_sys_time": 0.9748723333333333
+    },
+    "256MB": {
+      "total_mb": 256,
+      "mean_sort_time": 12.016338666666666,
+      "stdev_sort_time": 0.5161425885017944,
+      "min_sort_time": 11.682746,
+      "max_sort_time": 12.61085,
+      "mean_total_time": 16.420451333333332,
+      "mean_throughput_mb_s": 85.32000000000001,
+      "mean_user_time": 3.8861693333333336,
+      "mean_sys_time": 4.678218666666667
+    },
+    "512MB": {
+      "total_mb": 512,
+      "mean_sort_time": 24.278638666666666,
+      "stdev_sort_time": 0.6447726015552558,
+      "min_sort_time": 23.610478,
+      "max_sort_time": 24.897153,
+      "mean_total_time": 33.055444,
+      "mean_throughput_mb_s": 84.39333333333333,
+      "mean_user_time": 8.313173666666668,
+      "mean_sys_time": 9.130097666666666
+    }
+  }
+}

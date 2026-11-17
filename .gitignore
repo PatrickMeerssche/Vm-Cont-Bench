@@ -1,0 +1,14 @@
+bin/
+tmp_io/
+data_tmp/
+*.o
+*.part
+__pycache__/
+*.pyc
+
+# VirtualBox & Vagrant
+.vagrant/
+*.log
+
+# Editor configs
+.vscode/
