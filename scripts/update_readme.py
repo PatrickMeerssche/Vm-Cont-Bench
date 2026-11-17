@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Atualiza a secao de resultados do README.md com base nos arquivos gerados em results/.
-Insere data e hora da ultima execucao e as tabelas com comparativos e overheads.
+Atualiza a secao de resultados e especificacoes do hardware no README.md.
 """
 
 import json
@@ -31,6 +30,16 @@ def generate_results_markdown():
     now_str = datetime.now().strftime("%d/%m/%Y às %H:%M:%S")
 
     md = []
+    md.append("## 🖥️ Especificações do Ambiente Experimental\n")
+    md.append("| Componente | Detalhes do Hardware / Software |")
+    md.append("|---|---|")
+    md.append("| **Processador (CPU)** | 13th Gen Intel(R) Core(TM) i5-13450HX (10 núcleos: 6 P-cores + 4 E-cores, 16 threads, Turbo até 4.60 GHz, 20 MB Cache) |")
+    md.append("| **Memória RAM** | 24 GB DDR5 (23.2 GiB utilizáveis pelo SO) |")
+    md.append("| **Armazenamento** | SSD NVMe Western Digital PC SN740 512GB (PCIe 4.0 x4, leitura até 5000 MB/s, escrita até 4000 MB/s) |")
+    md.append("| **Sistema Operacional Host** | Ubuntu 22.04 LTS (Kernel Linux 6.1.0-060100-generic, x86_64) |")
+    md.append("| **Ambiente Contêiner** | Docker Engine 24.x (imagem base Ubuntu 22.04 LTS, kernel compartilhado) |")
+    md.append("| **Ambiente Máquina Virtual** | VirtualBox 6.1.50 (Guest: Ubuntu 22.04 LTS, 4 vCPUs, 4096 MB RAM, Nested Paging On) |\n")
+
     md.append("## 📈 Resultados Obtidos e Análise de Overhead\n")
     md.append(f"> 🕒 **Última execução:** {now_str}\n")
 
@@ -99,7 +108,7 @@ def update_readme():
     results_section = generate_results_markdown()
 
     # Procurar a secao de resultados e substituir
-    pattern = r"## 📈 Resultados Obtidos e Análise de Overhead.*"
+    pattern = r"## (🖥️ Especificações do Ambiente Experimental|📈 Resultados Obtidos e Análise de Overhead).*"
     if re.search(pattern, content, flags=re.DOTALL):
         updated_content = re.sub(pattern, results_section, content, flags=re.DOTALL)
     else:

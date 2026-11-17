@@ -73,9 +73,20 @@ Ou execute a bateria completa de uma vez:
 
 ---
 
+## 🖥️ Especificações do Ambiente Experimental
+
+| Componente | Detalhes do Hardware / Software |
+|---|---|
+| **Processador (CPU)** | 13th Gen Intel(R) Core(TM) i5-13450HX (10 núcleos: 6 P-cores + 4 E-cores, 16 threads, Turbo até 4.60 GHz, 20 MB Cache) |
+| **Memória RAM** | 24 GB DDR5 (23.2 GiB utilizáveis pelo SO) |
+| **Armazenamento** | SSD NVMe Western Digital PC SN740 512GB (PCIe 4.0 x4, leitura até 5000 MB/s, escrita até 4000 MB/s) |
+| **Sistema Operacional Host** | Ubuntu 22.04 LTS (Kernel Linux 6.1.0-060100-generic, x86_64) |
+| **Ambiente Contêiner** | Docker Engine 24.x (imagem base Ubuntu 22.04 LTS, kernel compartilhado) |
+| **Ambiente Máquina Virtual** | VirtualBox 6.1.50 (Guest: Ubuntu 22.04 LTS, 4 vCPUs, 4096 MB RAM, Nested Paging On) |
+
 ## 📈 Resultados Obtidos e Análise de Overhead
 
-> 🕒 **Última execução:** 16/11/2026 às 23:40:07
+> 🕒 **Última execução:** 16/11/2026 às 23:57:23
 
 ### 1. Benchmark CPU-Bound (Mandelbrot)
 
